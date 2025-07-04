@@ -1,0 +1,307 @@
+/* NAVIGATION */
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* SEARCH AREA */
+.search-section {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 12px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.search-category, .search-input {
+  border: none;
+  background: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-category {
+  color: #333;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+}
+
+.search-button {
+  background-color: #0b5821;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #009985;
+}
+
+.promo-section {
+  padding: 20px;
+  background-color: #f9f9f9
+}
+
+.promo-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.promo-left {
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+/* Promo kanan */
+.promo-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.promo-right img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-menu-wrapper {
+  background-color :white;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.icon-menu {
+  display: flex;
+  justify-content: space-evenly; /* bisa juga space-between */
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.icon-menu::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  width: 90px;
+}
+.menu-item img {
+  width: 90px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+
+.menu-item img:hover {
+  transform: scale(1.1); /* efek zoom saat hover */
+}
+
+.menu-item span {
+  display: block;
+  margin-top: 4px;
+}
+
+
+/* BOOK LIST SECTION */
+.book-list-section {
+  background-color: #fdfdfd;
+  padding: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+  font-weight: 600;
+}
+
+.rekomendasi-banner {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.rekomendasi-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px white;
+
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 12px;
+  min-width: 180px;
+  flex-shrink: 0;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.book-card h3 {
+  font-size: 18px;
+  margin-top: 12px;
+  color: white;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #000000;
+  margin: 5px 0;
+  background-color: white;
+}
+
+.book-links a {
+  margin: 5px 5px 0 5px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .promo-container {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    width: 60px;
+  }
+
+  .book-card {
+    width: 90%;
+  }
+}
+
+/* Container scroll horizontal */
+.rekomendasi-buku .book-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 7px;
+  gap: 1rem;
+}
+
+/* Scroll bar agar tampak halus */
+.rekomendasi-buku .book-list::-webkit-scrollbar {
+  height: 80px;
+}
+
+.rekomendasi-buku .book-list::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 4px;
+}
+
+.rekomendasi-buku .book-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Book Card Styling */
+.rekomendasi-buku .book-card {
+  flex: 0 0 auto;
+  width: 180px;
+  background-color:rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(249, 246, 248);
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.rekomendasi-buku .book-card:hover {
+  transform: translateY(-4px);
+}
+
+.rekomendasi-buku .book-card img {
+  border-radius: 4px;
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+}
+.promo-banner {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0; /* Hapus padding jika ada */
+}
+.promo-banner img {
+  height: 400px;
+  width: 390px;
+  object-fit: contain; /* atau "cover" kalau ingin penuh dan terpotong */
+  
+}
+
